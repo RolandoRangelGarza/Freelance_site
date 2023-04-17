@@ -158,6 +158,7 @@ svg {
 
 .service p {
     line-height: 2;
+    text-align: center;
 }
 .service .icons {
     height: 17rem;
