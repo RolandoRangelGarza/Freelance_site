@@ -1,8 +1,8 @@
 :root {
     --blanco: #ffffff;
-    --negro: #212121;
-    --primario: #40513B;
-    --secundario: #609966;
+    --negro: #2C3333;
+    --primario: #2E4F4F;
+    --secundario: #0E8388;
 }
 html {
     font-size: 62.5%;
@@ -16,7 +16,7 @@ html {
 body {
     font-size: 16px; /*1rem = 10px*/
     font-family: 'Roboto Slab', serif;
-    background-image: linear-gradient(to top, #EDF1D6 0%, var(--blanco) 20%);
+    background-image: linear-gradient(to top, #2C3333 0%, #2c3340 20%);
 }
 
 h1 {
@@ -40,7 +40,7 @@ svg {
 }
 .titulo {
     text-align: center;
-    color: var(--primario);
+    color: var(--blanco);
     font-size: 3.8rem;
     font-weight: 400;
 }
@@ -67,6 +67,13 @@ svg {
     text-align: center;
 }
 
+.shadow {
+    -webkit-box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
+    -moz-box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
+    box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
+    background-color: var(--blanco);
+    padding: 3rem;
+}
 .nav-background {
     background-color: var(--primario);
 }
@@ -105,6 +112,7 @@ svg {
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2.2rem;
 }
 
 .contenido-canvas {
@@ -126,5 +134,37 @@ svg {
 
 .ubication {
     display: flex;
+    align-items: center;
+}
+ /* Servicios */
+@media (min-width: 768px) {
+    .services {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* 100% a 3 fracciones */
+        column-gap: 1.5rem;
+    }
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service h3 {
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.service p {
+    line-height: 2;
+}
+.service .icons {
+    height: 17rem;
+    width: 17rem;
+    background-color: var(--primario);
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
