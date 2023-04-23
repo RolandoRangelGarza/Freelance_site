@@ -164,13 +164,15 @@ svg {
     display: flex;
     align-items: center;
 }
-
-.services,
-.navegacion-principal,
-.form {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
+@media (min-width: 768px) {
+    .services,
+    .navegacion-principal,
+    .form {
+        scroll-snap-align: center;
+        scroll-snap-stop: always;
+    }
 }
+
  /* Servicios */
 @media (min-width: 768px) {
     .services {
