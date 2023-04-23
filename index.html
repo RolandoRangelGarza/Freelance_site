@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-    <header>
+    <header class="header">
         <h1 class="titulo">Rolando Garza <span>Freelancer</span></h1>
     </header>
     
@@ -93,36 +93,37 @@
 
         <section>
             <h2>Contacto</h2>
-            <form>
+            <form class="form">
                 <fieldset>
-                    <legend>Solicita información llenando los campos</legend>
-                    <div>
-                        <label>Nombre</label>
-                        <input type="text" placeholder="Nombre(s), Apellidos">
+                    <legend>Solicita información, envía un mensaje.</legend>
+                    <div class="fields-container">
+                        <div class="field">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Nombre(s), Apellidos">
+                        </div>
+                        <div class="field">
+                            <label>Teléfono</label>
+                            <input class="input-text" type="text" placeholder="Número de teléfono">
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <input class="input-text" type="text" placeholder="tucorreo@example.com">
+                        </div>
+                        <div class="field">
+                            <label>Mensaje</label>
+                            <textarea class="input-text" cols="30" rows="1"></textarea>
+                        </div>
                     </div>
-                    <div>
-                        <label>Teléfono</label>
-                        <input type="tel" placeholder="Número de teléfono">
-                    </div>
-                    <div>
-                        <label>Email</label>
-                        <input type="email" placeholder="tucorreo@example.com">
-                    </div>
-                    <div>
-                        <label>Mensaje</label>
-                        <textarea cols="30" rows="1"></textarea>
-                    </div>
-                    <div>
-                        <input type="submit" value="Enviar">
+                   
+                    <div class="alinear-centro flex">
+                        <input class="button width-70" type="submit" value="Enviar">
                     </div>
                 </fieldset>
             </form>
         </section>
-        
-        <footer>
-            <p>Todos los derechos reservados</p>
-        </footer>
     </main>
-    
+    <footer id="footer">
+        <p>Todos los derechos reservados &copy; Rolando Rangel Garza 2023.</p>
+    </footer>
 </body>
 </html>

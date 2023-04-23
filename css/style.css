@@ -3,10 +3,12 @@
     --negro: #2C3333;
     --primario: #2E4F4F;
     --secundario: #0E8388;
+    --footer: #395B64;
 }
 html {
     font-size: 62.5%;
-    box-sizing: border-box; 
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
 }
 /*Atajo para box model*/
 *, *:before, *:after {
@@ -38,6 +40,8 @@ h1, h2, h3 {
 svg {
     margin-right: 1.5rem;
 }
+
+
 .titulo {
     text-align: center;
     color: var(--blanco);
@@ -46,11 +50,11 @@ svg {
 }
 
 .titulo span {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 .contenedor {
-    max-width: 120rem;
+    max-width: 85%;
     margin: 0 auto 0 auto;
 }
 
@@ -65,14 +69,38 @@ svg {
     font-weight: bold;
     border-radius: .5rem;
     text-align: center;
+    border: none;
 }
 
+.button:hover {
+    cursor: pointer;
+    color: #2c3340;
+}
 .shadow {
     -webkit-box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
     -moz-box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
     box-shadow: 10px 10px 38px -1px rgba(0,0,0,0.44);
     background-color: var(--blanco);
-    padding: 3rem;
+    padding: 1.5rem;
+}
+
+/* Utilidades */
+
+.width-70 {
+    width: 70%;
+}
+
+@media (min-width: 768) {
+    .width-100 {
+        width: auto;
+    }
+}
+.flex {
+    display: flex;
+}
+
+.alinear-centro {
+    justify-content: space-around;
 }
 .nav-background {
     background-color: var(--primario);
@@ -98,7 +126,7 @@ svg {
     color: var(--blanco);
     text-decoration: none;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 400;
     padding: 0.8rem;
 }
 
@@ -110,9 +138,9 @@ svg {
 .canvas {
     background-image: url(../img/canvas.jpg);
     background-size: cover;
-    height: 450px;
+    height: 48rem;
     position: relative;
-    margin-bottom: 2.2rem;
+    /* margin-bottom: 2.2rem; */
 }
 
 .contenido-canvas {
@@ -135,6 +163,13 @@ svg {
 .ubication {
     display: flex;
     align-items: center;
+}
+
+.services,
+.navegacion-principal,
+.form {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
  /* Servicios */
 @media (min-width: 768px) {
@@ -163,9 +198,83 @@ svg {
 .service .icons {
     height: 17rem;
     width: 17rem;
-    background-color: var(--primario);
+    background-color: var(--secundario);
     border-radius: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Contacto */
+
+.form {
+    background-color: var(--primario);
+    width: min(90rem, 100%); /* Reemplazo de mq utilizando valor más pequeño */
+    margin: 0 auto;
+    padding: 1.8rem;
+    border-radius: 1rem;
+}
+
+.form fieldset {
+    border: none;
+}
+
+.form legend {
+    font-size: 1.9rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .fields-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto
+                            auto
+                            15rem;
+        column-gap: 1rem;
+        
+    }
+}
+
+.field {
+    margin-bottom: 1rem;
+}
+
+.field label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+}
+
+.field textarea {
+    height: 12rem;
+}
+
+/* Email y mensaje */
+.field:nth-child(3),
+.field:nth-child(4) {
+    /* Va desde la columna 1 a la 3 */
+    grid-column: 1 / 3;
+}
+
+#footer {
+    font-size: 1.7rem;
+    color: var(--blanco);
+    font-weight: 400;
+    text-align: center;
+    width: 100%;
+    padding: 0.5rem;
+    background-color: var(--footer);
 }
