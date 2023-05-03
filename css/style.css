@@ -413,7 +413,7 @@ svg {
     .skill {
         width: 100%;
     }
-    svg {
+    .skill svg {
         zoom: 2;
     }
 
