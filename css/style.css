@@ -358,10 +358,14 @@ svg {
     font-size: 3rem;
 }
 
+.descripcion {
+    display: flex;
+    justify-content: center;
+}
 .h2-black {
     color: var(--negro);
-    font-size: 2.5rem;
     font-weight: 400;
+    font-size: 2.5rem;
 }
 
 .h3-black {
@@ -370,6 +374,9 @@ svg {
     font-weight: 400;
 }
 
+.h3-skill {
+    font-size: 2.3rem;
+}
 .responsive {
     width: 100%;
     height: auto;
@@ -391,7 +398,34 @@ svg {
     display: flex;
     justify-content: space-evenly;
     text-align: center;
-    width: 100%;
+    width: 90%;
+}
+
+/* Responsive skills */
+
+@media (max-width: 480px) {
+    .skills {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skill {
+        width: 100%;
+    }
+    svg {
+        zoom: 2;
+    }
+
+    .h1-black-skills {
+        font-size: 4.5rem;
+    }
+
+    .h2-black {
+        font-size: 3.4rem;
+    }
+    .h3-skill {
+        font-size: 3.5rem;
+    }
 }
 .skill {
     display: flex;
